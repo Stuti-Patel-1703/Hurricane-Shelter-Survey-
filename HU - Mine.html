@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurricane Shleter Experience Survey</title>
+    <style>
+		body {
+			font-family: sans-serif;
+			background-color: #2e7d32;
+			display: flex;
+			justify-content: center;
+			padding: 20px;
+		}
+		.survey-card {
+			background: #e8f5e9;
+			padding: 30px;
+			border-radius: 8px;
+			box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+			max-width: 600px;
+			width: 100%;
+		}
+		.question { margin-bottom: 20px; }
+		label { font-weight: bold; display: block; margin-bottom: 8px; }
+		input, select, textarea {
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ddd;
+			border-radius: 4px;
+		}
+		.radio-group input {
+			width: auto;
+			margin-right: 5px;
+		}
+		button {
+			background: #2e7d32;
+			color: white;
+			padding: 12px;
+			border: none;
+			width: 100%;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		#thankYouMessage { display: none; text-align: center; color: green; }
+	</style>
+</head>
+
+<body>
+
+<div class="survey-card">
+    <div id="surveyForm">
+        <h2>Hurricane Shleter Experience</h2>
+        
+		<div class="question">
+            <label for="shelter">Which shelter did you stayed at?</label>
+            <select id="shelter">
+			
+				<option value="Select a shelter">[Select a shelter]</option>
+				<option value="Atwater Elementary School">Atwater Elementary School</option>
+				<option value="Auburndale High School">Auburndale High School</option>
+				<option value="BayCare (old Barnes & Noble)">BayCare (old Barnes & Noble)</option>
+				<option value="Belleair Elementary School">Belleair Elementary School</option>
+				<option value="Booker High School">Booker High School</option>
+				<option value="Brookside Middle School">Brookside Middle School</option>
+				<option value="Buffalo Creek Middle School">Buffalo Creek Middle School</option>
+				<option value="Burnett Middle School">Burnett Middle School</option>
+				<option value="Campbell Park Elementary School">Campbell Park Elementary School</option>
+				<option value="Centennial Middle School">Centennial Middle School</option>
+				<option value="Chain of Lakes Elementary School">Chain of Lakes Elementary School</option>
+				<option value="Challenger K-8">Challenger K-8</option>
+				<option value="Citrus Ridge Academy">Citrus Ridge Academy</option>
+				<option value="City Furniture">City Furniture</option>
+				<option value="Clearwater Fundamental Middle School">Clearwater Fundamental Middle School</option>
+				<option value="Collins PK-8 School">Collins PK-8 School</option>
+				<option value="Dunedin Highland Middle School">Dunedin Highland Middle School</option>
+				<option value="Durant High School">Durant High School</option>
+				<option value="Enrichment Center">Enrichment Center</option>
+				<option value="Fairmount Park Elementary School">Fairmount Park Elementary School</option>
+				<option value="Fasano Regional Hurricane Center">Fasano Regional Hurricane Center</option>
+				<option value="Fivay High School">Fivay High School</option>
+				<option value="FDOH Polk Specialty Care Unit">FDOH Polk Specialty Care Unit</option>
+				<option value="George Jenkins High School">George Jenkins High School</option>
+				<option value="Gibbs High School">Gibbs High School</option>
+				<option value="Gulf Gate Elementary School">Gulf Gate Elementary School</option>
+				<option value="Gullett Elementary School">Gullett Elementary School</option>
+				<option value="Haines City High School">Haines City High School</option>
+				<option value="Harvey Elementary School">Harvey Elementary School</option>
+				<option value="Heron Creek Middle School">Heron Creek Middle School</option>
+				<option value="Highlands Grove Elementary">Highlands Grove Elementary</option>
+				<option value="Horizons Elementary School">Horizons Elementary School</option>
+				<option value="Kathleen High School">Kathleen High School</option>
+				<option value="Lake Marion Creek Middle School">Lake Marion Creek Middle School</option>
+				<option value="Lake Region High School">Lake Region High School</option>
+				<option value="Lockhart Elementary Magnet School">Lockhart Elementary Magnet School</option>
+				<option value="McKeel Academy">McKeel Academy</option>
+				<option value="McNeal Elementary School">McNeal Elementary School</option>
+				<option value="Melrose Elementary School">Melrose Elementary School</option>
+				<option value="Middleton High School">Middleton High School</option>
+				<option value="Miller Elementary School">Miller Elementary School</option>
+				<option value="Mills Elementary School">Mills Elementary School</option>
+				<option value="Mona Jain Middle School">Mona Jain Middle School</option>
+				<option value="Mulberry Middle School">Mulberry Middle School</option>
+				<option value="Mulrennan Middle School">Mulrennan Middle School</option>
+				<option value="Myakka Elementary School">Myakka Elementary School</option>
+				<option value="New Heights Elementary School">New Heights Elementary School</option>
+				<option value="North Port High School">North Port High School</option>
+				<option value="Oak Grove Middle School">Oak Grove Middle School</option>
+				<option value="Palm Harbor Middle School">Palm Harbor Middle School</option>
+				<option value="Palm Harbor University High School">Palm Harbor University High School</option>
+				<option value="Phillippi Shores Elementary">Phillippi Shores Elementary</option>
+				<option value="Pizzo Elementary School">Pizzo Elementary School</option>
+				<option value="Reddick Elementary School">Reddick Elementary School</option>
+				<option value="Robert H. Prine Elementary">Robert H. Prine Elementary</option>
+				<option value="Ridge Community High School">Ridge Community High School</option>
+				<option value="River Ridge Middle and High Schools">River Ridge Middle and High Schools</option>
+				<option value="R. Bruce Wagner Elementary School">R. Bruce Wagner Elementary School</option>
+				<option value="Seminole Hard Rock Casino">Seminole Hard Rock Casino</option>
+				<option value="Shields Middle School">Shields Middle School</option>
+				<option value="Sleepy Hill Elementary School">Sleepy Hill Elementary School</option>
+				<option value="Southside Elementary School">Southside Elementary School</option>
+				<option value="Spessard Holland Elementary School">Spessard Holland Elementary School</option>
+				<option value="Steinbrenner High School">Steinbrenner High School</option>
+				<option value="Strawberry Crest High School">Strawberry Crest High School</option>
+				<option value="Sugg Middle School">Sugg Middle School</option>
+				<option value="Sumner High School">Sumner High School</option>
+				<option value="Sunlake High School">Sunlake High School</option>
+				<option value="Tenoroc High School">Tenoroc High School</option>
+				<option value="Virgil Mills Elementary School">Virgil Mills Elementary School</option>
+				<option value="Wesley Chapel High School">Wesley Chapel High School</option>
+				<option value="West Hernando Middle School">West Hernando Middle School</option>
+				<option value="Winter Haven High School">Winter Haven High School</option>
+				<option value="Woodland Middle School">Woodland Middle School</option>
+
+            </select>
+        </div>
+		
+		<p></p>
+		
+        <div class="question">
+            <label>How would you rate your overall experience at the shelter? (1 being 'not satisfactory at all' and 5 being 'highly satisfactory')</label>
+            <input type="radio" name="overall" value="1"> 1
+			<input type="radio" name="overall" value="2"> 2
+			<input type="radio" name="overall" value="3"> 3
+			<input type="radio" name="overall" value="4"> 4
+            <input type="radio" name="overall" value="5"> 5
+        </div>
+		
+		<p></p>
+		<h3>Structure and Help Provided</h3>
+		<p></p>
+		
+		<div class="question">
+            <label>How would you rate your overall experience with the <b>Structure and Help Provided</b> at the shelter? (1 being 'not satisfactory at all' and 5 being 'highly satisfactory')</label>
+            <input type="radio" name="structureAndHelp" value="1"> 1
+			<input type="radio" name="structureAndHelp" value="2"> 2
+			<input type="radio" name="structureAndHelp" value="3"> 3
+			<input type="radio" name="structureAndHelp" value="4"> 4
+            <input type="radio" name="structureAndHelp" value="5"> 5
+        </div>
+		
+		<p></p>
+		
+		<div class="question">
+            <label>How <b>safe</b> did you feel at the shelter? (1 being 'not safe at all' and 5 being 'completely safe')</label>
+            <input type="radio" name="safety" value="1"> 1
+			<input type="radio" name="safety" value="2"> 2
+			<input type="radio" name="safety" value="3"> 3
+			<input type="radio" name="safety" value="4"> 4
+            <input type="radio" name="safety" value="5"> 5
+        </div>
+		
+		<p></p>
+		
+		<div class="question">
+            <label>How was the condition of the <b>Impact-Resistant Windows</b> at your shelter? (1 being 'not satisfactory at all' and 5 being 'highly satisfactory')</label>
+            <input type="radio" name="impactResistantWindows" value="1"> 1
+			<input type="radio" name="impactResistantWindows" value="2"> 2
+			<input type="radio" name="impactResistantWindows" value="3"> 3
+			<input type="radio" name="impactResistantWindows" value="4"> 4
+            <input type="radio" name="impactResistantWindows" value="5"> 5
+        </div>
+		
+		<p></p>
+		
+		<div class="question">
+            <label>How was the shelter's <b>back-up power</b>? (1 being 'not satisfactory at all' and 5 being 'highly satisfactory')</label>
+            <input type="radio" name="backUpPower" value="1"> 1
+			<input type="radio" name="backUpPower" value="2"> 2
+			<input type="radio" name="backUpPower" value="3"> 3
+			<input type="radio" name="backUpPower" value="4"> 4
+            <input type="radio" name="backUpPower" value="5"> 5
+        </div>
+		
+		<p></p>
+		
+		<div class="question">
+            <label>How did the shelter help <b>people with disabilities</b>? (1 being 'no help was provided' and 5 being 'appropriate help was provided')</label>
+            <input type="radio" name="disabilities" value="1"> 1
+			<input type="radio" name="disabilities" value="2"> 2
+			<input type="radio" name="disabilities" value="3"> 3
+			<input type="radio" name="disabilities" value="4"> 4
+            <input type="radio" name="disabilities" value="5"> 5
+        </div>
+		
+		<p></p>
+		
+		<div class="question">
+            <label>How did the shelter help <b>people with special needs</b>? (1 being 'no help was provided' and 5 being 'appropriate help was provided')</label>
+            <input type="radio" name="specialNeeds" value="1"> 1
+			<input type="radio" name="specialNeeds" value="2"> 2
+			<input type="radio" name="specialNeeds" value="3"> 3
+			<input type="radio" name="specialNeeds" value="4"> 4
+            <input type="radio" name="specialNeeds" value="5"> 5
+        </div>
+		
+		<p></p>
+		<h3>Communication</h3>
+		<p></p>
+		
+		<div class="question">
+            <label>How would you rate your overall experience regarding <b>Communication</b> at the shelter? (1 being 'not satisfactory at all' and 5 being 'highly satisfactory')</label>
+            <input type="radio" name="communication" value="1"> 1
+			<input type="radio" name="communication" value="2"> 2
+			<input type="radio" name="communication" value="3"> 3
+			<input type="radio" name="communication" value="4"> 4
+            <input type="radio" name="communication" value="5"> 5
+        </div>
+		
+		<p></p>
+
+		<div class="question">
+            <label>How <b>regularly</b> did shelter provided <b>updates on the Hurricane</b>? (1 being 'barely sufficient' and 5 being 'highly available')</label>
+            <input type="radio" name="updates" value="1"> 1
+			<input type="radio" name="updates" value="2"> 2
+			<input type="radio" name="updates" value="3"> 3
+			<input type="radio" name="updates" value="4"> 4
+            <input type="radio" name="updates" value="5"> 5
+        </div>
+		
+		<p></p>
+		
+		<div class="question">
+            <label>How satisfactory was the information shared for <b>emergencies, evacuations, accomodations, etc.</b>? (1 being 'not satisfactory at all' and 5 being 'highly satisfactory')</label>
+            <input type="radio" name="information" value="1"> 1
+			<input type="radio" name="information" value="2"> 2
+			<input type="radio" name="information" value="3"> 3
+			<input type="radio" name="information" value="4"> 4
+            <input type="radio" name="information" value="5"> 5
+        </div>
+		
+		<p></p>
+		<h3>Essentials</h3>
+		<p></p>
+		
+		<div class="question">
+            <label>How would you rate your overall experience with <b>Essentials</b> at the shelter? (1 being 'not satisfactory at all' and 5 being 'highly satisfactory')</label>
+            <input type="radio" name="essentials" value="1"> 1
+			<input type="radio" name="essentials" value="2"> 2
+			<input type="radio" name="essentials" value="3"> 3
+			<input type="radio" name="essentials" value="4"> 4
+            <input type="radio" name="essentials" value="5"> 5
+        </div>
+		
+		<p></p>
+		
+		<div class="question">
+            <label>How satisfied are you with the <b>quality of the food</b> distributed? (1 being 'not satisfactory at all' and 5 being 'highly satisfactory')</label>
+            <input type="radio" name="foodQuality" value="1"> 1
+			<input type="radio" name="foodQuality" value="2"> 2
+			<input type="radio" name="foodQuality" value="3"> 3
+			<input type="radio" name="foodQuality" value="4"> 4
+            <input type="radio" name="foodQuality" value="5"> 5
+        </div>
+		
+		<p></p>
+		
+		<div class="question">
+            <label>How <b>often</b> was the food distributed? (1 being 'barely sufficient' and 5 being 'highly available')</label>
+            <input type="radio" name="foodDistribution" value="1"> 1
+			<input type="radio" name="foodDistribution" value="2"> 2
+			<input type="radio" name="foodDistribution" value="3"> 3
+			<input type="radio" name="foodDistribution" value="4"> 4
+            <input type="radio" name="foodDistribution" value="5"> 5
+        </div>
+		
+		<p></p>
+		
+		<div class="question">
+            <label>How much <b>portable water</b> was available? (1 being 'barely sufficient' and 5 being 'highly available')</label>
+            <input type="radio" name="water" value="1"> 1
+			<input type="radio" name="water" value="2"> 2
+			<input type="radio" name="water" value="3"> 3
+			<input type="radio" name="water" value="4"> 4
+            <input type="radio" name="water" value="5"> 5
+        </div>
+		
+		<p></p>
+		
+		<div class="question">
+            <label>How satisfied were you with the <b>sanitation</b> in the shelter? (1 being 'not satisfactory at all' and 5 being 'highly satisfactory')</label>
+            <input type="radio" name="sanitation" value="1"> 1
+			<input type="radio" name="sanitation" value="2"> 2
+			<input type="radio" name="sanitation" value="3"> 3
+			<input type="radio" name="sanitation" value="4"> 4
+            <input type="radio" name="sanitation" value="5"> 5
+        </div>
+		
+		<p></p>
+		
+		<div class="question">
+            <label>What was the state of the <b>First-Aid Kit</b> provided by the shelter? (1 being 'not satisfactory at all' and 5 being 'highly satisfactory')</label>
+            <input type="radio" name="firstAidKit" value="1"> 1
+			<input type="radio" name="firstAidKit" value="2"> 2
+			<input type="radio" name="firstAidKit" value="3"> 3
+			<input type="radio" name="firstAidKit" value="4"> 4
+            <input type="radio" name="firstAidKit" value="5"> 5
+        </div>
+		
+		<p></p>
+		<h3>Sleeping/Resting/Recovering Area</h3>
+		<p></p>
+		
+		<div class="question">
+            <label>How would you rate your overall experience with the <b>Sleeping/Resting/Recovering Area</b> at the shelter? (1 being not satisfactory and 5 being very satisfactory)</label>
+            <input type="radio" name="srrArea" value="1"> 1
+			<input type="radio" name="srrArea" value="2"> 2
+			<input type="radio" name="srrArea" value="3"> 3
+			<input type="radio" name="srrArea" value="4"> 4
+            <input type="radio" name="srrArea" value="5"> 5
+        </div>
+		
+		<p></p>
+		
+		<div class="question">
+            <label>Were you provided enough <b>area to sleep</b>? (1 being not satisfactory and 5 being very satisfactory)</label>
+            <input type="radio" name="sleepArea" value="1"> 1
+			<input type="radio" name="sleepArea" value="2"> 2
+			<input type="radio" name="sleepArea" value="3"> 3
+			<input type="radio" name="sleepArea" value="4"> 4
+            <input type="radio" name="sleepArea" value="5"> 5
+        </div>
+		
+		<p></p>
+		
+		<div class="question">
+            <label>How satisfied are you with the <b>slepping conditions</b> provided in the shelter? (1 being 'not satisfied at all' and 5 being 'highly satisfied')</label>
+            <input type="radio" name="sleppingConditions" value="1"> 1
+			<input type="radio" name="sleppingConditions" value="2"> 2
+			<input type="radio" name="sleppingConditions" value="3" 3
+			<input type="radio" name="sleppingConditions" value="4"> 4
+            <input type="radio" name="sleppingConditions" value="5"> 5
+        </div>
+		
+		<p></p>
+		
+		<div class="question">
+            <label>How satisfied are you with the <b>medical assistance</b> provided in the shelter? (1 being 'not satisfied at all' and 5 being 'highly satisfied')</label>
+            <input type="radio" name="medicalAssistance" value="1"> 1
+			<input type="radio" name="medicalAssistance" value="2"> 2
+			<input type="radio" name="medicalAssistance" value="3"> 3
+			<input type="radio" name="medicalAssistance" value="4"> 4
+            <input type="radio" name="medicalAssistance" value="5"> 5
+        </div>
+		
+		<p></p>
+		
+		<div class="question">
+            <label>Were <b>additional blankets</b> and <b>resources</b> provided? (1 being 'no or little resources were provided' and 5 being 'appropriate amount of extra resources were available')</label>
+            <input type="radio" name="resources" value="1"> 1
+			<input type="radio" name="resources" value="2"> 2
+			<input type="radio" name="resources" value="3"> 3
+			<input type="radio" name="resources" value="4"> 4
+            <input type="radio" name="resources" value="5"> 5
+        </div>
+		
+		<p></p>
+		<h3>Pet Area</h3>
+		<h5><i>If there is no Pet Area in the shelter, do not answer the following questions.</i></h5>
+		<p></p>
+		
+		<div class="question">
+            <label>How would you rate your overall experience with the <b>Pet Area</b> at the shelter? (1 being not satisfactory and 5 being very satisfactory)</label>
+            <input type="radio" name="petArea" value="1"> 1
+			<input type="radio" name="petArea" value="2"> 2
+			<input type="radio" name="petArea" value="3"> 3
+			<input type="radio" name="petArea" value="4"> 4
+            <input type="radio" name="petArea" value="5"> 5
+        </div>
+		
+		<p></p>
+		
+		<div class="question">
+            <label>How properly <b>maintained</b> was the <b>pet area</b> in the shelter? (1 being 'not maintained at all' and 5 being 'highly maintained')</label>
+            <input type="radio" name="maintained" value="1"> 1
+			<input type="radio" name="maintained" value="2"> 2
+			<input type="radio" name="maintained" value="3"> 3
+			<input type="radio" name="maintained" value="4"> 4
+            <input type="radio" name="maintained" value="5"> 5
+        </div>
+		
+		<p></p>
+		
+		<div class="question">
+            <label>Was your pet provided <b>appropriate resources</b> if the situation required? (1 being 'no sources were provided' and 5 being 'appropriate sources were provided')</label>
+            <input type="radio" name="appropriateResources" value="1" style="margin-left: 20px;"> 1
+			<input type="radio" name="appropriateResources" value="2" style="margin-left: 20px;"> 2
+			<input type="radio" name="appropriateResources" value="3" style="margin-left: 20px;"> 3
+			<input type="radio" name="appropriateResources" value="4" style="margin-left: 20px;"> 4
+            <input type="radio" name="appropriateResources" value="5" style="margin-left: 20px;"> 5
+        </div>
+		
+		<p></p>
+		<h3>Additional Information</h3>
+		<p></p>
+		
+        <div class="question">
+            <label for="additional">Was there any additional information you wish to share regarding your shelter?</label>
+            <textarea id="additional" rows="3"></textarea>
+        </div>
+		
+		<p></p>
+        <button onclick="submitSurvey()">Submit Survey</button>
+    </div>
+
+    <div id="thankYouMessage">
+        <h3>Success!</h3>
+        <p>Thank you for your feedback!</p>
+		<p>We would do our best to improve the shelters!</p>
+    </div>
+</div>
+
+<script>
+    function submitSurvey() {
+    // Hide form and show thank you message
+    document.getElementById('surveyForm').style.display = 'none';
+    document.getElementById('thankYouMessage').style.display = 'block';
+
+    console.log("Survey submitted successfully!");
+}
+</script>
+
+</body>
+</html>
